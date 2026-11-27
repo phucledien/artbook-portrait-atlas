@@ -1,0 +1,494 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Portrait Atlas • Artbook collection</title>
+<style>
+:root{color-scheme:light;--paper:#f7f5ee;--ink:#1b302a;--muted:#56635a;--line:#cccfc1;--red:#974b3e;--green:#214b3e}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.48 "Avenir Next",Avenir,system-ui,sans-serif}header,main{max-width:1540px;margin:auto;padding:0 clamp(18px,4vw,68px)}header{padding-top:29px}.mast{display:flex;align-items:end;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding-bottom:18px}h1,h2,h3{font-family:Baskerville,Georgia,serif;font-weight:500;line-height:1.1;margin:0}h1{font-size:clamp(44px,6.5vw,91px);letter-spacing:-.045em}h2{font-size:clamp(27px,3.1vw,42px)}h3{font-size:24px}.kicker{color:var(--red);text-transform:uppercase;letter-spacing:.15em;font-size:11px;font-weight:700;margin:0 0 5px}.numbers{color:var(--muted);margin:0 0 5px}nav{display:flex;gap:22px;flex-wrap:wrap}nav button{border:0;border-bottom:3px solid transparent;background:transparent;border-radius:0;padding:14px 0 11px;color:var(--muted)}nav button[aria-selected=true]{border-color:var(--green);color:var(--ink);font-weight:650}main{padding-bottom:4rem}.intro{margin:22px 0 17px;color:var(--muted)}button,input,select,a.button{font:inherit}input,select{background:#fffdf6;color:var(--ink);border:1px solid #aeb6a6;border-radius:5px;padding:8px 9px;min-height:40px;max-width:100%}button,.button{cursor:pointer;background:#fefdf7;border:1px solid var(--line);border-radius:5px;color:var(--ink);padding:8px 12px;text-decoration:none}button:hover,.button:hover{border-color:var(--green)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #cc8759;outline-offset:2px}button:disabled{opacity:.45;cursor:default}.primary{background:var(--green);color:white;border-color:var(--green)}label{display:grid;gap:4px;color:var(--muted);font-size:12px;font-weight:600}label input,label select{font-size:14px;font-weight:400}.filters,.actions{display:flex;gap:10px;align-items:end;flex-wrap:wrap}.filters{margin:19px 0 10px}.filters label:first-child{flex:1;min-width:150px}.filters #book{max-width:240px}.count{color:var(--muted);font-size:13px;margin:15px 0}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:23px 15px}.card{text-align:left;background:none;display:block;border:0;padding:0;min-width:0}.card:hover .name{text-decoration:underline;text-underline-offset:3px}.card img,.thumb img,.hero img,.mini img{display:block;object-fit:cover;background:#eae7da;width:100%;aspect-ratio:1}.card img{border:1px solid var(--line);border-radius:4px}.name{font:500 20px/1.18 Baskerville,Georgia,serif;margin:9px 0 3px;display:block}.meta{color:var(--muted);font-size:12px}.section{padding:22px 0 12px}.empty{padding:28px 0;color:var(--muted)}[hidden]{display:none!important}dialog{background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:0;width:min(960px,95%);max-height:91vh}dialog::backdrop{background:#0b1c18a8}.dialoghead{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--paper);border-bottom:1px solid var(--line);padding:15px 22px}.dialoghead h2{font-size:28px}.body{padding:19px 22px}.preview{display:grid;grid-template-columns:minmax(180px,310px) 1fr;gap:23px;align-items:start}.hero img{border:1px solid var(--line);border-radius:5px}.facts{margin:8px 0 14px;color:var(--muted);overflow-wrap:anywhere}.variantgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(85px,1fr));gap:9px;margin:12px 0 4px}.thumb{font-size:11px;text-align:left;padding:3px;line-height:1.3}.thumb span{display:block;padding:3px 1px}.thumb[aria-pressed=true]{outline:2px solid var(--green);outline-offset:1px}.mapper{margin:16px 0 2px}.mapper summary{color:var(--green);cursor:pointer;font-weight:650}.mapper .actions{margin-top:9px}.mapper input{width:180px}.minor{font-size:12px;color:var(--muted)}.reviewfaces{display:flex;flex-wrap:wrap;gap:10px}.mini{width:94px;margin:0;text-align:left;overflow-wrap:anywhere;font-size:12px;padding:3px}.mini span{display:block;margin:3px 0}.tile{display:block;width:64px;height:64px;background-repeat:no-repeat}.candidate{margin:0;padding:0;min-width:75px}.candidate figcaption{font-size:12px}.row{display:flex;align-items:center;gap:13px;padding:12px 0;border-bottom:1px solid var(--line)}.row img{width:65px;height:65px;object-fit:cover}.row div{flex:1}.status{font-size:13px;color:var(--green)}a{color:var(--green)}.pageSelect{width:82px}.mono{font:12px ui-monospace,monospace;overflow-wrap:anywhere}.count strong{color:var(--ink)}@media(max-width:650px){.mast{display:block}.numbers{margin:5px 0 0}.gallery{grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:16px 10px}.preview{grid-template-columns:minmax(0,1fr)}.hero{max-width:245px}.filters label{flex:1;min-width:125px}.filters label:first-child{flex-basis:100%}.filters select{width:100%}.body{padding:13px}.dialoghead{padding:12px}nav{gap:16px}}
+
+.filters{display:grid;grid-template-columns:minmax(165px,1.25fr) repeat(3,minmax(110px,1fr));align-items:end}.filters label:first-child{min-width:0}.filters #book{max-width:100%}.filters input,.filters select{width:100%}.filters #clear{justify-self:start}.reviewTools,.reviewPager,.decisionControls{display:flex;align-items:end;gap:9px;flex-wrap:wrap}.reviewTools{margin:15px 0}.reviewPager{margin:14px 0;align-items:center}.reviewPager .count{margin-right:auto}.reviewGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,390px),1fr));gap:12px}.reviewCard{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:13px;border:1px solid var(--line);border-radius:6px;background:#fbfaf5;align-items:start}.reviewCard h3{font-size:21px;margin-bottom:3px}.reviewCard p{font-size:14px;margin:8px 0}.reviewPic{padding:0;overflow:hidden}.reviewPic img{display:block;width:100%;height:auto}.decisionControls{margin-top:12px}.decisionControls input{width:100%;font-size:13px}.decisionControls button{font-size:13px}.fileLabel{display:inline-block;position:relative;overflow:hidden;cursor:pointer}.fileLabel input{position:absolute;inset:0;opacity:0;width:100%;cursor:pointer}.fileLabel:focus-within{outline:2px solid var(--green)}.qualityNote{font-size:13px;color:var(--muted);margin:10px 0}.sourceCheck{display:flex;align-items:center;gap:7px}.sourceCheck input{width:16px;min-height:16px}.card .shade{width:100%;aspect-ratio:1;display:grid;place-items:center;background:#eae8df;border:1px solid var(--line);border-radius:4px;overflow:hidden}.card .shade img{border:0;border-radius:0;max-width:100%;height:auto}.hero{width:100%;align-self:start}.hero img{width:100%;max-width:100%;margin:0 auto}.reviewCard .mono{font-size:10px}.smallcap{font-size:12px;color:var(--red)}@media(max-width:750px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.filters label{min-width:0}.reviewCard{grid-template-columns:72px 1fr}.filters label:first-child{grid-column:1/-1}}@media(min-width:1350px){.filters{grid-template-columns:minmax(150px,1.1fr) repeat(3,minmax(95px,.7fr)) minmax(170px,1.15fr) minmax(120px,.8fr) minmax(120px,.8fr) auto}.filters #clear{justify-self:stretch}}
+.pendingSolo{color:var(--muted);text-align:center;padding:12px;font-size:15px}.card .shade.pendingSolo{background:#f3f1e9}.castOrder{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 20px;margin:16px 0 14px}.castOrder .count{margin:0}.castOrder label{display:flex;align-items:center;gap:8px}
+.wardrobeCount{display:block}#wardGrid{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}#wardGrid img{object-fit:contain}#wardGrid .thumb{align-self:stretch}.thumb[aria-pressed=true]{outline-offset:0}#wardSection .actions{align-items:end}#groupMemberLabel[hidden]{display:none}#groupMemberLabel{display:grid;gap:3px;max-width:100%;margin-block:8px}#groupMember{width:100%;min-width:0;max-width:32rem}.mainStar{display:inline-block;margin-inline-start:.35em;color:#805c12;font-family:system-ui,sans-serif;font-size:.72em;vertical-align:.12em}</style></head><body><header><div class="mast"><div><p class="kicker">Artbook collection</p><h1>Portrait Atlas</h1></div><p class="numbers" id="numbers"></p></div><nav aria-label="Catalogue views"><a href="new-artbooks.html" style="align-self:center;color:inherit;margin-right:.6rem">Games</a><button data-tab="cast" aria-selected="true">Characters</button><button data-tab="decisions" aria-selected="false">Decisions <span id="decisioncount"></span></button><button data-tab="sources" aria-selected="false">Source pages</button><button data-tab="mapping" aria-selected="false">Mapping <span id="mapcount"></span></button></nav></header><main>
+<section id="cast"><div class="filters"><label>Find a character<input type="search" id="query" placeholder="Name or alias" autocomplete="off"></label><label>Gender<select id="gender"><option value="">All entries</option></select></label><label>Casting age<select id="age"><option value="">All ages</option></select></label><label>Cast group<select id="group"><option value="">Main &amp; Other</option><option>Main</option><option>Other</option></select></label><label>Game<select id="castGame"><option value="">All games</option></select></label><label>Artbook or source<select id="book"><option value="">All artbooks</option></select></label><label>Expression<select id="emotion"><option value="">All expressions</option></select></label><label>Crop size<select id="size"><option value="0">Any size</option><option value="128">128 px or larger</option><option value="256">256 px or larger</option><option value="512">512 px or larger</option><option value="1024">1,024 px or larger</option></select></label><label>Default portrait<select id="defaultState"><option value="">All characters</option><option value="ready">Default available</option><option value="pending">Default portrait pending</option></select></label><button id="clear">Reset</button></div><p class="qualityNote">★ marks your Main cast. Main characters appear first, with women first in each cast group. Age bands describe the illustrated appearance for casting.</p><div class="castOrder"><p class="count" id="results" aria-live="polite"></p><label>Sort by<select id="castSort"><option value="balanced">Cast order, then portrait quality</option><option value="count">Most usable portraits</option><option value="resolution">Highest preview resolution</option><option value="name">Name (A–Z)</option></select></label></div><div class="gallery" id="grid"></div></section>
+<section id="decisions" hidden><h2 class="section">Your decisions</h2><p class="intro">Women appear first, followed by middle-aged and older men. The queue skips unreadable faces and lower-quality portraits of young men. Your choices update this browser’s catalogue. Export them to carry them into another browser or the mapping skill.</p><div class="actions"><button id="femaleBatch" type="button">Review female portraits in fours</button><button id="exportDecisions">Export decisions</button><label class="button fileLabel">Import decisions<input id="importDecisions" type="file" accept=".json,application/json"></label><span role="status" class="status" id="feedback"></span></div><div class="reviewTools"><label>Decision status<select id="reviewMode"><option>Pending</option><option>Saved</option></select></label><label>Issue<select id="issue"><option value="">All issues</option><option>No usable portrait</option><option>Age</option><option>Identity</option><option>Expression</option><option>Quality or framing</option></select></label><label>Gender<select id="reviewGender"><option value="">All entries</option></select></label><label>Character<input type="search" id="reviewQuery" placeholder="Name or alias"></label></div><div class="reviewPager"><span class="count" id="decisionResults" aria-live="polite"></span><button id="rprev">Previous</button><button id="rnext">Next</button></div><p class="minor" id="batchHint" hidden>Each card shows the best available candidate. Select a picture to inspect the original crop. Keep or hide a picture, or use Next to leave it undecided.</p><div class="reviewGrid" id="decisionlist"></div></section>
+<section id="sources" hidden><h2 class="section">Source pages</h2><p class="intro">Browse each scan or PDF page. The optional raw face index includes unassigned drawings, repeats and detection errors.</p><div class="actions"><label>Artbook<select id="sbook"></select></label><label>Page<input id="pnum" type="number" min="1" value="1" class="pageSelect"></label><button id="prev">Previous</button><button id="next">Next</button></div><label class="sourceCheck"><input type="checkbox" id="showRaw">Show raw, unassigned face detections</label><span id="rawSaved" class="minor"></span><label class="sourceCheck" id="hiddenRawLabel" hidden><input type="checkbox" id="showHidden">Include raw faces you hid</label><div id="pagebody"></div></section>
+<section id="mapping" hidden><h2 class="section">Your mapping</h2><p class="intro">Assign a portrait from a character’s detail view. Each game, platform, NPC and slot combination holds one portrait.</p><div class="actions"><button class="primary" id="exportmap">Export mapping JSON</button></div><div id="maprows"></div></section>
+</main><dialog id="rawDialog" style="max-width:490px"><div class="body"><h3 id="rawTitle"></h3><div class="tile" id="rawTile" style="margin:12px 0"></div><label>Possible character or role<input id="rawNote" maxlength="180" placeholder="Name or identification note"></label><p class="minor">Export decisions to pass this source location and note to the mapping skill for full-size inspection.</p><div class="decisionControls"><button class="primary" id="rawNominate">Save identification</button><button id="rawHide">Hide face</button><button id="rawUndo">Undo choice</button><button id="rawClose">Close</button></div><p id="rawMsg" class="status"></p></div></dialog><dialog id="detail"><div class="dialoghead"><h2 id="who"></h2><button id="close">Close</button></div><div class="body"><div class="preview"><div class="hero"><img id="large" alt=""></div><div><p class="kicker" id="isdefault"></p><h3 id="what"></h3><div class="facts" id="facts"></div><p class="mono" id="pid"></p><label id="groupMemberLabel" hidden>Grouped close-ups<select id="groupMember"></select></label><div class="actions"><a class="button" id="saveimg" download>Save portrait</a><button id="jumppage">Source page</button><button type="button" id="chooseDefault" class="primary" hidden>Use as default</button></div><div role="status" class="minor" id="defaultFeedback"></div><details class="mapper" id="mapper"><summary>Assign to a game slot</summary><form id="mapform"><div class="actions"><label>Game<input id="game" required placeholder="Game title"></label><label>Platform<select id="platform"><option>Windows</option><option>Switch port</option></select></label><label>NPC or avatar key<input id="target" required placeholder="Native character key"></label><label>Expression slot<input id="slot" required placeholder="e.g. 0 or happy"></label><button class="primary">Save assignment</button></div></form><p id="saved" class="status" role="status"></p></details></div></div><section id="wardSection" hidden><h3 class="section">Outfits &amp; poses <span id="wardTotal"></span></h3><div class="actions"><label id="wardEditionLabel">Edition<select id="wardEdition"></select></label><label id="wardFormatLabel">Source format<select id="wardFormat"></select></label><label>Find an outfit<input id="wardSearch" type="search" placeholder="Outfit or sprite filename"></label></div><span class="minor" id="wardMatches" role="status"></span><div class="variantgrid" id="wardGrid"></div><button id="wardMore" type="button">Show more</button></section>
+<h3 class="section">Expression portraits <span id="variantcount"></span></h3><div class="variantgrid" id="variants"></div></div></dialog>
+<script type="module">
+"use strict";
+const D=await (await fetch('catalogue.json')).json(),$=id=>document.getElementById(id),books=new Map(D.sources.map(s=>[s.id,s])),cast=new Map([...D.characters,...(D.archived_characters||[])].map(c=>[c.id,c])),faces=new Map(),pages={};let person,face,sBook,assignments=[];
+function el(tag,txt,cls){let n=document.createElement(tag);if(txt!==undefined)n.textContent=txt;if(cls)n.className=cls;return n}
+function option(node,v,txt){node.add(new Option(txt,v))}
+const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+for(const c of cast.values())for(const f of c.portraits)faces.set(f.id,[c,f]);
+const nf=n=>n.toLocaleString('en-US');
+const decisionSchema='portrait-atlas-decisions/1';
+const decisionKey='artbook.portrait.decisions.v1';
+const ageOptions=['Young','Middle-aged','Old'];
+// Apply the shared choices through the same review controls as browser-only decisions.
+for(const c of cast.values()){
+ if(c.decision_base_age)c.age=c.decision_base_age;
+ for(const f of c.portraits)if(f.decision_base_status)f.status=f.decision_base_status;
+}
+const sharedDecisions=D.shared_decisions||{schema:decisionSchema,ages:{},portraits:{},sources:{},defaults:{}};
+let decisions=JSON.parse(JSON.stringify(sharedDecisions));
+decisions.defaults??={};
+function validateDecisions(v){
+ if(!v||v.schema!==decisionSchema||!v.ages||!v.portraits||typeof v.ages!=='object'||Array.isArray(v.ages)||typeof v.portraits!=='object'||Array.isArray(v.portraits))throw Error('Unexpected decision file format.');
+ for(const field of ['ages','defaults','portraits','sources']){
+  const entries=v[field];
+  if(!entries || typeof entries!=='object' || Array.isArray(entries))continue;
+  const ids=(field==='ages'||field==='defaults')?D.retired_ids.characters:D.retired_ids.portraits;
+  for(const id of ids)delete entries[id];
+ }
+ for(const [id,age] of Object.entries(v.ages))if(!cast.has(id)||cast.get(id).age!=='Needs decision'||!ageOptions.includes(age))throw Error('Invalid age decision for '+id);
+ for(const [id,d] of Object.entries(v.portraits))if(!faces.has(id)||(faces.get(id)[1].previous_status||faces.get(id)[1].status)!=='Review'||!d||!['Ready','Excluded'].includes(d.status)||(d.expression!==undefined&&(typeof d.expression!=='string'||!d.expression.trim()||d.expression.length>80)))throw Error('Invalid portrait decision for '+id);
+ if(v.defaults===undefined)v.defaults={};
+ if(!v.defaults||typeof v.defaults!=='object'||Array.isArray(v.defaults))throw Error('Invalid default portrait choices.');
+ const retiredPortraits=new Set(D.retired_ids.portraits);
+ for(const [cid,pid] of Object.entries(v.defaults)){
+  if(retiredPortraits.has(pid)){delete v.defaults[cid];continue}
+  const pair=faces.get(pid);
+  if(pair&&pair[0].id===cid&&pair[1].hidden_reason&&pair[1].previous_status==='Ready'){delete v.defaults[cid];continue}
+  if(!cast.has(cid)||(pid!==null&&(!pair||pair[0].id!==cid||pair[1].hidden_reason||pair[1].alternate_only_reason||(pair[1].status==='Excluded'&&pair[1].previous_status!=='Review'))))throw Error('Invalid default portrait for '+cid);
+ }
+ if(v.sources===undefined)v.sources={};
+ if(!v.sources||typeof v.sources!=='object'||Array.isArray(v.sources))throw Error('Invalid source decisions.');
+ for(const [id,d] of Object.entries(v.sources)){
+  const m=id.match(/^([a-z0-9]+)-p(\d{3,})-f(\d{2,})$/);
+  if(!m||!books.has(m[1])||!Number(m[2])||Number(m[2])>books.get(m[1]).pages||!Number(m[3])||faces.has(id)||!d||!['Identify','Hide'].includes(d.action)||(d.action==='Identify'&&(!d.note||typeof d.note!=='string'||d.note.length>180)))throw Error('Invalid raw face decision for '+id);
+ }
+ return v;
+}
+try{
+ const raw=localStorage.getItem(decisionKey);
+ if(raw){
+  const saved=validateDecisions(JSON.parse(raw));
+     const defaults={...sharedDecisions.defaults,...saved.defaults};
+   if(saved.catalogue_revision===D.decision_revision)decisions=saved;
+  else for(const field of ['ages','portraits','sources'])decisions[field]={...saved[field],...sharedDecisions[field]};
+   decisions.defaults=defaults;
+ }
+}catch{}
+function statusOf(f){return f.hidden_reason?'Excluded':(decisions.portraits[f.id]?.status||f.status)}
+function variantTitle(f){const e=expressionOf(f);return e==='Expression variation'&&f.sprite_variant?f.sprite_variant:e}
+function expressionOf(f){return decisions.portraits[f.id]?.expression||f.expression}
+function ageOf(c){return decisions.ages[c.id]||c.age}
+function readyFaces(c){return c.portraits.filter(f=>statusOf(f)==='Ready')}
+const mainCastRank=new Map(D.main_cast.map((id,index)=>[id,index]));
+function activeStats(c){let ready=readyFaces(c),types=new Set();for(const f of ready){const e=expressionOf(f),family=D.expression_families[e]??e;if(family)types.add(family)}return {ready,count:types.size,group:mainCastRank.has(c.id)?'Main':'Other'}}
+function defaultOf(c,stats=activeStats(c)){
+ if(!stats.count)return;
+ const chosen=stats.ready.find(f=>f.id===decisions.defaults[c.id]&&!f.alternate_only_reason&&!f.hidden_reason);
+ if(chosen)return chosen;
+ const named=f=>{const label=expressionOf(f);return D.expression_families[label]??label};
+ const choices=stats.count===1?stats.ready.filter(named):stats.ready;
+ const approved=c.default_candidates.map(id=>choices.find(f=>f.id===id&&!f.alternate_only_reason)).filter(Boolean);
+ if(approved.length)return approved.find(f=>f.art_finish!=='Line art')||approved[0];
+ if(stats.count===1){
+  const preferred=choices.filter(f=>f.art_finish!=='Line art');
+  return (preferred.length?preferred:choices).reduce((best,f)=>!best||f.width>best.width?f:best,undefined);
+ }
+}
+function downloadJSON(value,filename){const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=el('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),2000)}
+function saveDecisions(){decisions.catalogue_revision=D.decision_revision;try{localStorage.setItem(decisionKey,JSON.stringify(decisions));$('feedback').textContent='Decision saved in this browser.'}catch{$('feedback').textContent='Decision saved for this session. Export your decisions before closing.'}refresh()}
+function rawID(k,p,i){return k+'-p'+String(p).padStart(3,'0')+'-f'+String(i).padStart(2,'0')}
+function rawChoice(k,p,i,off){
+ const id=rawID(k,p,i);$('rawTitle').textContent=books.get(k).title+' · p. '+p+' · face '+i;
+ const tile=$('rawTile');tile.style.backgroundImage='url("review/'+k+'-'+String(Math.floor(off/256)).padStart(2,'0')+'.webp")';tile.style.backgroundPosition='-'+(off%16*64)+'px -'+(Math.floor(off%256/16)*64)+'px';
+ let prior=decisions.sources[id];$('rawNote').value=prior?.note||'';$('rawMsg').textContent=prior?'Saved choice · '+prior.action:'';
+ function record(v){if(v)decisions.sources[id]=v;else delete decisions.sources[id];saveDecisions();$('rawDialog').close();drawPage()}
+ $('rawNominate').onclick=()=>{const value=$('rawNote').value.trim();if(!value){$('rawNote').focus();$('rawMsg').textContent='Enter a name, role or identification note.';return}record({action:'Identify',note:value})};
+ $('rawHide').onclick=()=>record({action:'Hide'});$('rawUndo').hidden=!prior;$('rawUndo').onclick=()=>record(null);$('rawClose').onclick=()=>$('rawDialog').close();$('rawDialog').showModal();
+}
+function decisionPriority(c){
+ if(c.gender==='Female')return 0;
+ if(c.gender==='Male'&&['Middle-aged','Old'].includes(ageOf(c)))return 1;
+ return c.gender==='Male'&&ageOf(c)==='Young'?3:2;
+}
+function decisionEligible(c,f){
+ if(!f || (f.hidden_reason && !f.alternate_only_reason) || f.decision_quality==='Unreadable' || (f.status==='Excluded'&&!f.alternate_only_reason))return false;
+ return !(c.gender==='Male'&&ageOf(c)==='Young'&&f.decision_quality==='Soft');
+}
+function decisionReference(c){
+ const candidates=c.portraits.filter(f=>decisionEligible(c,f)&&statusOf(f)!=='Excluded');
+ return candidates.find(f=>f.id===defaultOf(c)?.id)||candidates.find(f=>f.id===c.review_reference)||candidates.sort((a,b)=>Number(statusOf(b)==='Ready')-Number(statusOf(a)==='Ready')||b.width-a.width)[0];
+}
+function refresh(){
+ let active=0,portraits=0,pending=0;const tags=new Set();
+ for(const c of cast.values()){const stats=activeStats(c);if(stats.count){active++;portraits+=stats.ready.length;for(const f of stats.ready)tags.add(expressionOf(f))}pending+=Number(ageOf(c)==='Needs decision'&&Boolean(decisionReference(c)));pending+=c.portraits.filter(f=>statusOf(f)==='Review'&&decisionEligible(c,f)).length}
+ $('numbers').textContent=active+' available characters · '+nf(portraits)+' usable portraits · '+D.games.length+' games · '+books.size+' sources';
+ $('decisioncount').textContent='('+pending+')';$('rawSaved').textContent=Object.keys(decisions.sources).length?' · '+Object.keys(decisions.sources).length+' raw face choices saved':'';const selected=$('emotion').value;$('emotion').replaceChildren(new Option('All expressions',''));
+ for(const tag of [...tags].sort())option($('emotion'),tag,tag);if(tags.has(selected))$('emotion').value=selected;
+ search();drawDecisions();drawMap();
+}
+function setAge(c,age){if(age)decisions.ages[c.id]=age;else delete decisions.ages[c.id];saveDecisions()}
+function setPortrait(f,value){if(value)decisions.portraits[f.id]=value;else delete decisions.portraits[f.id];saveDecisions()}
+function issueKind(f){if(f.reasons.some(r=>/identity/i.test(r)))return 'Identity';if(f.reasons.some(r=>/expression needs/i.test(r)))return 'Expression';return 'Quality or framing'}
+let decisionPage=0, femaleBatch=false;
+const batchSize=4;
+function updateBatchControls(on) {
+ femaleBatch=on;
+ $('femaleBatch').textContent=on?'All decisions':'Review female portraits in fours';
+ $('batchHint').hidden=!on;
+ document.querySelector('.reviewTools').hidden=on;
+ document.querySelector('.reviewTools').style.display=on?'none':'';
+}
+function enterFemaleBatch(page=0) {
+ updateBatchControls(true);decisionPage=page;tab('decisions');
+}
+$('femaleBatch').onclick=()=>{
+ if(femaleBatch){updateBatchControls(false);decisionPage=0;drawDecisions();history.replaceState(null,'','#decisions')}
+ else{enterFemaleBatch();history.replaceState(null,'','#female-review')}
+};
+function drawDecisions(){
+ const mode=$('reviewMode').value,group=$('issue').value,gender=$('reviewGender').value,q=norm($('reviewQuery').value.trim()),rows=[];
+ if(femaleBatch){
+  for(const id of D.female_review_order){
+   const c=cast.get(id);if(readyFaces(c).length)continue;
+   const eligible=c.portraits.filter(p=>decisionEligible(c,p)&&statusOf(p)==='Review');
+   const ref=eligible.find(p=>p.id===c.review_reference)||eligible.sort((a,b)=>b.width-a.width)[0];
+   if(ref)rows.push({c,f:ref,none:!readyFaces(c).length});
+  }
+ }else for(const c of cast.values()){
+  if(gender&&gender!==c.gender||q&&!norm([c.name,c.id,...c.aliases].join(' ')).includes(q))continue;
+  const none=!readyFaces(c).length;if(group==='No usable portrait'&&!none)continue;
+  const reference=decisionReference(c);if((reference||mode==='Saved')&&c.age==='Needs decision'&&(!group||group==='Age'||group==='No usable portrait')&&((mode==='Saved')===Boolean(decisions.ages[c.id])))rows.push({c,f:reference,age:true,none});
+  for(const f of c.portraits){
+   if((mode==='Saved'?!decisions.portraits[f.id]:(!decisionEligible(c,f)||f.status!=='Review'||decisions.portraits[f.id])))continue;
+   if(group&&group!=='No usable portrait'&&group!==issueKind(f))continue;
+   rows.push({c,f,none});
+  }
+ }
+ if(!femaleBatch)rows.sort((a,b)=>decisionPriority(a.c)-decisionPriority(b.c)||Number(b.none)-Number(a.none)||a.c.name.localeCompare(b.c.name)||Number(Boolean(b.age))-Number(Boolean(a.age)));
+ const perPage=femaleBatch?batchSize:12;decisionPage=Math.min(decisionPage,Math.max(0,Math.ceil(rows.length/perPage)-1));const start=decisionPage*perPage;
+ $('rprev').disabled=!decisionPage;$('rnext').disabled=start+perPage>=rows.length;$('decisionResults').textContent=rows.length?(start+1)+'–'+Math.min(rows.length,start+perPage)+' of '+rows.length+' decisions':'No decisions match this view.';
+ if(!femaleBatch&&!rows.length&&mode==='Pending'&&!group&&!gender&&!q)$('decisionResults').textContent='All visible decisions are complete.';
+ if(femaleBatch&&!rows.length)$('decisionResults').textContent='No female portraits awaiting a decision in this batch.';
+ if(femaleBatch&&rows.length)$('decisionResults').textContent='Female portrait review · Batch '+(decisionPage+1)+' of '+Math.ceil(rows.length/perPage)+' · '+rows.filter(r=>!decisions.portraits[r.f.id]&&!readyFaces(r.c).length).length+' undecided characters';
+ const list=$('decisionlist');list.replaceChildren();
+ for(const item of rows.slice(start,start+perPage)){
+  const {c,age,none}=item;const f=item.f,card=el('article',undefined,'reviewCard'),show=el('button',undefined,'reviewPic');if(f){show.title='Inspect '+c.name+' at source size';if(statusOf(f)!=='Excluded'&&decisionEligible(c,f)&&!f.alternate_only_reason){show.append(pic(f,c.name));show.onclick=()=>openFace(c,f)}else{show.hidden=true}}else{show.hidden=true}
+  const body=el('div');body.append(el('h3',(femaleBatch?(rows.indexOf(item)%batchSize+1)+'. ':'')+c.name),el('div',c.gender+' · '+(none?'No usable portrait yet':ageOf(c)),'meta'));
+  const controls=el('div',undefined,'decisionControls');
+  if(age){
+   body.append(el('p','Which age band fits this character for casting?'));
+   if(decisions.ages[c.id]){body.append(el('p','Your selection · '+decisions.ages[c.id],'status'));let undo=el('button','Undo');undo.onclick=()=>setAge(c,null);controls.append(undo)}
+   else for(const a of ageOptions){let b=el('button',a);b.onclick=()=>setAge(c,a);controls.append(b)}
+  }else{
+   body.append(el('p',f.reasons.join(' · ')),el('div',f.id+' · '+f.width+' px · '+expressionOf(f),'mono'));
+   let saved=decisions.portraits[f.id];
+   if(saved){body.append(el('p','Your selection · '+(saved.status==='Ready'?'Keep':'Hide')+(saved.expression?' · '+saved.expression:''),'status'));let undo=el('button','Undo');undo.onclick=()=>setPortrait(f,null);controls.append(undo)}
+   else{
+    let tag=el('input');tag.placeholder='Expression (optional)';tag.maxLength=80;tag.setAttribute('aria-label','Expression for '+f.id);
+    if(f.label_basis==='Unlabelled')tag.placeholder='Name the expression';
+    let yes=el('button',issueKind(f)==='Identity'?'Confirm identity & keep':'Keep portrait','primary'),no=el('button','Hide portrait');
+    yes.onclick=()=>{let v={status:'Ready'};let label=tag.value.trim();if(label)v.expression=label;setPortrait(f,v)};
+    no.onclick=()=>setPortrait(f,{status:'Excluded'});controls.append(tag,yes,no);
+   }
+  }
+  body.append(controls);card.append(show,body);list.append(card)
+ }
+}
+for(const id of ['reviewMode','issue','reviewGender','reviewQuery'])$(id).oninput=()=>{decisionPage=0;drawDecisions()};
+$('rprev').onclick=()=>{decisionPage--;drawDecisions()};$('rnext').onclick=()=>{decisionPage++;drawDecisions()};
+$('exportDecisions').onclick=()=>downloadJSON(decisions,'portrait-decisions.json');
+$('importDecisions').onchange=async ev=>{const file=ev.target.files[0];if(!file)return;try{const v=validateDecisions(JSON.parse(await file.text()));Object.assign(decisions.ages,v.ages);Object.assign(decisions.portraits,v.portraits);Object.assign(decisions.sources,v.sources);Object.assign(decisions.defaults,v.defaults);saveDecisions();$('feedback').textContent='Imported decisions from '+file.name}catch(e){$('feedback').textContent=e.message}ev.target.value=''};
+
+$('numbers').textContent=nf(cast.size)+' entries · '+nf(faces.size)+' portraits · '+D.games.length+' games · '+books.size+' sources';
+const browseGroups = [...D.games, ...(D.collections || [])];
+const gamesById = new Map(browseGroups.map(game => [game.id, game]));
+const gameForSource = new Map();
+for (const game of browseGroups) {
+  option($('castGame'), game.id, game.title);
+  const group = document.createElement('optgroup');
+  group.label = game.title;
+  for (const id of game.sources) {
+    gameForSource.set(id, game.id);
+    const item = new Option(books.get(id).title, id);
+    group.append(item);
+  }
+  $('sbook').append(group);
+}
+for (const [id, book] of books) {
+  if (!gameForSource.has(id)) option($('sbook'), id, book.title);
+}
+function loadGameBooks() {
+  const game = gamesById.get($('castGame').value);
+  $('book').replaceChildren(new Option(game ? 'All sources in game' : 'All sources', ''));
+  for (const id of game ? game.sources : books.keys()) option($('book'), id, books.get(id).title);
+}
+loadGameBooks();
+$('castGame').onchange = () => { loadGameBooks(); search(); };
+for(const x of ['Female','Male','Creature / Mascot / Elements','Needs decision']){option($('gender'),x,x);option($('reviewGender'),x,x)}
+for(const x of [...ageOptions,'Needs decision','Not applicable'])option($('age'),x,x);
+for(const x of [...new Set([...faces.values()].map(cf=>cf[1].expression))].sort())option($('emotion'),x,x);
+function tab(id){for(const n of ['cast','decisions','sources','mapping'])$(n).hidden=n!==id;for(const b of document.querySelectorAll('[data-tab]'))b.setAttribute('aria-selected',String(b.dataset.tab===id));if(id==='decisions')drawDecisions();if(id==='sources')source();if(id==='mapping')drawMap()}
+for(const b of document.querySelectorAll('[data-tab]'))b.onclick=()=>tab(b.dataset.tab);
+function pic(f,name){let i=el('img');i.loading='lazy';i.alt=name;i.src=f.thumb||f.file;return i}
+const castOrders={
+ balanced:['coverage','usable','resolution'],
+ count:['usable','resolution','coverage'],
+ resolution:['resolution','usable','coverage'],
+ name:[]
+};
+const sortStorageKey='artbook.portrait.cast-sort.v1';
+try{
+ const saved=localStorage.getItem(sortStorageKey);
+ if(Object.hasOwn(castOrders,saved))$('castSort').value=saved;
+}catch{}
+function rankingWidth(f){
+ if(!f||f.decision_quality==='Unreadable')return 0;
+ const width=Math.min(300,f.width);
+ const soft=f.decision_quality==='Soft'||f.reasons?.includes('Soft linework at dialogue size');
+ return soft?width/2:width;
+}
+function castName(node,c){
+ node.textContent=c.name;
+ if(mainCastRank.has(c.id)){
+  const star=el('span','★','mainStar');
+  star.title='Main cast';star.setAttribute('aria-label','Main cast');
+  node.append(star);
+ }
+ return node;
+}
+function rankCards(rows,order){
+ const fields=castOrders[order]||castOrders.balanced;
+ rows.sort((a,b)=>{
+  const aMain=mainCastRank.has(a.c.id),bMain=mainCastRank.has(b.c.id);
+  if(aMain!==bMain)return aMain?-1:1;
+  const femaleFirst=Number(b.c.gender==='Female')-Number(a.c.gender==='Female');
+  if(femaleFirst)return femaleFirst;
+  if(aMain&&order==='balanced')return mainCastRank.get(a.c.id)-mainCastRank.get(b.c.id);
+  for(const field of fields){
+   const difference=b[field]-a[field];
+   if(difference)return difference;
+  }
+  if(a.name!==b.name)return a.name<b.name?-1:1;
+  return a.c.id.localeCompare(b.c.id);
+ });
+}
+function search(){const grid=$('grid');grid.replaceChildren();const q=norm($('query').value.trim()),g=$('gender').value,b=$('book').value,e=$('emotion').value,m=+$('size').value,ag=$('age').value,group=$('group').value;const rows=[];
+let displayed=0,awaiting=0;
+for(const c of cast.values()){
+ const stats=activeStats(c);if(!stats.count)continue;
+ const primary=defaultOf(c,stats),state=$('defaultState').value;
+ if((ag&&ageOf(c)!==ag)||(group&&group!==stats.group)||(g&&g!==c.gender)||!norm([c.name,c.id,...c.aliases].join(' ')).includes(q)||(state==='ready'&&!primary)||(state==='pending'&&primary))continue;
+ if ($('castGame').value==='other' && !b && !c.cast_group_override) continue;
+ const matches=stats.ready.filter(f=>(!f.pose||!f.optional||f===primary||Boolean(b||e||m))&&(!$('castGame').value||gameForSource.get(f.source)===$('castGame').value)&&(!b||f.source===b)&&(!e||expressionOf(f)===e)&&f.width>=m);
+ const filtered=Boolean($('castGame').value||b||e||m);
+ if(filtered&&!matches.length)continue;
+ const selected=(primary&&matches.includes(primary))?primary:filtered?matches.reduce((best,f)=>!best||f.width>best.width?f:best,null):null;
+ const previewWidth=rankingWidth(selected);
+ const coverage=matches.reduce((sum,f)=>sum+Math.min(previewWidth,rankingWidth(f))**2,0);
+ rows.push({c,stats,primary,matches,selected,coverage,name:norm(c.name),usable:matches.length,resolution:selected?.width||0});
+}
+rankCards(rows,$('castSort').value);
+for(const {c,stats,primary,matches,selected} of rows){
+ const card=el('button',undefined,'card'),panel=el('span',undefined,'shade');
+ if(selected){
+   const im=pic(selected,c.name);im.style.width='min(100%, '+selected.width+'px)';panel.append(im);displayed++;
+ }else{
+  panel.classList.add('pendingSolo');
+  const faceless=c.portraits.length>0&&c.portraits.every(f=>f.style==='Faceless'&&statusOf(f)==='Excluded');
+  panel.textContent=faceless?'Faceless source artwork':'Default portrait pending';awaiting++;
+ }
+ const totalLooks=visibleLookCount(c,stats.ready),matchedLooks=visibleLookCount(c,matches);
+ const usable=matchedLooks===totalLooks?String(totalLooks):matchedLooks+' of '+totalLooks;
+ const suffix=usable+' close-up'+(totalLooks===1?'':'s')+(selected?' · '+(selected!==primary?'Alternate · ':'')+selected.width+' px':'');
+ card.append(panel,castName(el('span',undefined,'name'),c),el('span',(c.optional?'Optional · ':'')+stats.group+' · '+stats.count+(stats.count===1?' expression · ':' expressions · ')+suffix,'meta'));
+ const open=selected||matches[0]||c.portraits.find(f=>f.id===c.review_reference&&statusOf(f)==='Review')||c.portraits.find(f=>statusOf(f)==='Review');
+ const outfitCount=visibleLookCount(c,stats.ready.filter(p=>p.pose));if(outfitCount)card.append(el('span',outfitCount+' outfit and pose close-ups','meta wardrobeCount'));if(open)card.onclick=()=>openFace(c,open);else card.disabled=true;
+ if(!selected&&c.default_note)card.title=panel.textContent==='Faceless source artwork'?'The source drawings omit the facial features.':c.default_note;
+ grid.append(card);
+}
+const found=rows.length;
+$('results').textContent=found?nf(found)+' matching character'+(found===1?'':'s')+(($('castGame').value||b||e||m)?' · Matching portraits':(' · '+displayed+' defaults · '+awaiting+' pending')):'No matching portraits. Change a filter or search term.'}
+for(const id of ['query','gender','age','group','book','emotion','size','defaultState'])$(id).oninput=search;
+$('castSort').onchange=()=>{
+ try{localStorage.setItem(sortStorageKey,$('castSort').value)}catch{}
+ search();
+};
+$('clear').onclick=()=>{$('castGame').value='';loadGameBooks();for(const id of ['query','gender','age','group','book','emotion','defaultState'])$(id).value='';$('size').value='0';$('castSort').value='balanced';$('castSort').onchange()};
+const groupKeysByCharacter = new Map();
+function visibleLookCount(c, portraits) {
+  if (!c.closeup_groups) return portraits.length;
+  if (!groupKeysByCharacter.has(c.id)) {
+    const keys = new Map();
+    for (const ids of c.closeup_groups) for (const id of ids) keys.set(id, ids[0]);
+    groupKeysByCharacter.set(c.id,keys);
+  }
+  const keys = groupKeysByCharacter.get(c.id);
+  return new Set(portraits.map(p=>keys.get(p.id)||p.id)).size;
+}
+let closeupGroups = new Map();
+function groupMembers(item) {
+  return closeupGroups.get(item.id)?.members || [item];
+}
+function sameCloseup(id, item) {
+  return id === item.id || Boolean(closeupGroups.get(item.id)?.members.some(p => p.id === id));
+}
+function prepareCloseups(c) {
+  closeupGroups = new Map();
+  const byId = new Map(c.portraits.map(p => [p.id, p]));
+  const selected = defaultOf(c)?.id;
+  for (const ids of c.closeup_groups || []) {
+    const members = ids.map(id => byId.get(id)).filter(p => p && statusOf(p) === 'Ready');
+    if (members.length < 2) continue;
+    const outfits = members.filter(p => p.pose);
+    const choices = outfits.length ? outfits : members;
+    const representative = choices.find(p => p.id === selected) || choices[0];
+    const group = {members, representative};
+    for (const p of members) closeupGroups.set(p.id, group);
+  }
+}
+function displayedCloseup(p) {
+  return !closeupGroups.has(p.id) || closeupGroups.get(p.id).representative === p;
+}
+function showGroupSelector(item) {
+  const select = $('groupMember'), members = groupMembers(item);
+  $('groupMemberLabel').hidden = members.length < 2;
+  if (members.length < 2) { select.replaceChildren(); return; }
+  const representative = closeupGroups.get(item.id).representative;
+  const ordered = [representative, ...members.filter(p => p !== representative)];
+  select.replaceChildren(...ordered.map((p,i) => {
+    const name = p.pose?.label || p.sprite_variant || expressionOf(p);
+    const option = new Option((i+1)+' · '+name+' · '+p.width+' px',p.id);
+    option.selected = p.id === item.id;
+    return option;
+  }));
+}
+$('groupMember').onchange = () => {
+  const selected = groupMembers(face).find(p => p.id === $('groupMember').value);
+  if (selected) showFace(selected);
+};
+
+const wardrobe = {items: [], visible: 24};
+function wardrobeLabel(item) {
+  return item.pose.label;
+}
+function wardrobeMatches(item) {
+  const edition=$('wardEdition').value, format=$('wardFormat').value, query=norm($('wardSearch').value);
+  const text=[wardrobeLabel(item),item.member,item.origin?.member||'',...(item.equivalent_members||[])].join(' ');
+  return (!edition || item.source===edition) && (!format || item.pose.format===format) && (!query || norm(text).includes(query));
+}
+function wardrobeGrid() {
+  const items=wardrobe.items.map(rep => {
+    const candidates = [rep, ...groupMembers(rep).filter(p => p !== rep && p.pose)];
+    return candidates.find(wardrobeMatches);
+  }).filter(Boolean), grid=$('wardGrid');
+  grid.replaceChildren();
+  $('wardMatches').textContent=items.length===wardrobe.items.length?'':items.length+' matching';
+  for (const item of items.slice(0,wardrobe.visible)) {
+    const tile=el('button',undefined,'thumb');
+    tile.dataset.id=item.id;
+    tile.setAttribute('aria-pressed',String(Boolean(face && sameCloseup(item.id,face))));
+    tile.title=item.member+' · '+item.width+' px';
+    const img=el('img');
+    img.alt='';img.loading='lazy';
+    img.src=item.thumb||item.file;
+    tile.append(img,el('span',wardrobeLabel(item)));
+    tile.onclick=()=>{showFace(item);$('detail').scrollTop=0};
+    grid.append(tile);
+  }
+  $('wardMore').hidden=items.length<=wardrobe.visible;
+  $('wardMore').textContent='Show more ('+Math.max(0,items.length-wardrobe.visible)+')';
+}
+function loadWardrobe(c) {
+  wardrobe.items=c.portraits.filter(f=>f.pose && (statusOf(f)==='Ready'||f.style==='Source sprite'&&statusOf(f)==='Review'));
+  const allOutfits=wardrobe.items;wardrobe.items=allOutfits.filter(displayedCloseup);
+  const formatRank={ 'Close-up':0,'Sprite':1,'Text box':2 };
+  wardrobe.items.sort((a,b)=>(formatRank[a.pose.format]??3)-(formatRank[b.pose.format]??3)||a.source.localeCompare(b.source)||a.page-b.page||a.id.localeCompare(b.id));
+  $('wardSection').hidden=!wardrobe.items.length;
+  if (!wardrobe.items.length){$('wardGrid').replaceChildren();return;}
+  $('wardTotal').textContent='('+wardrobe.items.length+')';
+  $('wardSearch').value='';wardrobe.visible=24;
+  $('wardEdition').replaceChildren(new Option('All editions',''));
+  for (const sid of new Set(allOutfits.map(f=>f.source))) $('wardEdition').append(new Option(books.get(sid).title.split(' · ').at(-1),sid));
+  $('wardEditionLabel').hidden=$('wardEdition').options.length<3;
+  $('wardFormat').replaceChildren(new Option('All sprite formats',''));
+  for (const fmt of new Set(allOutfits.map(f=>f.pose.format))) $('wardFormat').append(new Option(fmt,fmt));
+  $('wardFormatLabel').hidden=$('wardFormat').options.length<3;
+  wardrobeGrid();
+}
+function outfitImage(item) {
+  const img=item;
+  $('saveimg').href=img.file;
+  $('saveimg').download=item.id+'.'+img.file.split('.').pop();
+  $('saveimg').textContent='Save portrait';
+  if (item.pose) {
+    $('what').textContent=wardrobeLabel(item);
+    $('large').alt=person.name+' · '+wardrobeLabel(item);
+    $('facts').firstChild.after(el('div',img.width+' × '+(img.height||img.width)+' px · '+'Dialogue close-up'+' · '+(item.origin?.member||item.member).split('/').pop()));
+    $('facts').children[2]?.remove();
+  }
+  for (const tile of $('wardGrid').children)tile.setAttribute('aria-pressed',String(sameCloseup(tile.dataset.id,item)));
+}
+$('wardMore').onclick=()=>{wardrobe.visible+=36;wardrobeGrid()};
+for (const id of ['wardEdition','wardFormat','wardSearch']) $(id).oninput=()=>{wardrobe.visible=24;wardrobeGrid()};
+
+function openFace(c,f,includeReview=false){person=c;castName($('who'),c);$('mapper').open=false;$('variants').replaceChildren();prepareCloseups(c);loadWardrobe(c);const ready=readyFaces(c).filter(p=>!p.pose&&displayedCloseup(p)),currentDefault=defaultOf(c)?.id;$('variantcount').textContent='('+ready.length+' usable)';$('variantcount').parentElement.hidden=!ready.length&&Boolean(wardrobe.items.length);
+let fs=[...ready].sort((a,b)=>Number(b.id===currentDefault)-Number(a.id===currentDefault));if(!ready.length&&!wardrobe.items.length){fs=c.portraits.filter(p=>p.id!==f.id&&statusOf(p)==='Review').sort((a,b)=>b.width-a.width)}if(!f.pose&&displayedCloseup(f)&&!fs.some(p=>p.id===f.id))fs.unshift(f);for(let face of fs){let j=el('button',undefined,'thumb');j.dataset.id=face.id;j.title=face.id+' · '+face.width+' px';j.append(pic(face,''),el('span',(face.id===currentDefault?'Default · ':'')+variantTitle(face)));j.onclick=()=>showFace(face);$('variants').append(j)}
+let reviewToggle=$('reviewVariants');
+ if(!reviewToggle){reviewToggle=el('button');reviewToggle.id='reviewVariants';$('variants').before(reviewToggle)}
+ const extra=c.portraits.filter(p=>statusOf(p)==='Review'&&!p.hidden_reason);
+ const showToggle=!$('cast').hidden&&c.gender==='Male'&&ageOf(c)==='Young'&&ready.length>0&&extra.length>0;
+ reviewToggle.hidden=!showToggle;reviewToggle.style.display=showToggle?'':'none';
+ if(showToggle){
+  reviewToggle.textContent=includeReview?'Hide review portraits':'Show review portraits ('+extra.length+')';
+  reviewToggle.setAttribute('aria-expanded',String(includeReview));reviewToggle.onclick=()=>openFace(c,includeReview&&statusOf(face)!=='Ready'?(defaultOf(c)||ready[0]):face,!includeReview);
+  if(includeReview)for(const p of extra){if(fs.some(v=>v.id===p.id))continue;const b=el('button',undefined,'thumb');b.dataset.id=p.id;b.title=p.id+' · '+p.width+' px';b.append(pic(p,''),el('span','Review · '+expressionOf(p)));b.onclick=()=>showFace(p);$('variants').append(b)}
+ }
+ showFace(f);if(!$('detail').open)$('detail').showModal();$('detail').scrollTop=0}
+function showFace(f){face=f;$('large').src=f.file;$('large').style.width='min(100%, '+f.width+'px)';$('mapper').hidden=statusOf(f)!=='Ready'||!activeStats(person).count;$('large').alt=person.name+' — '+expressionOf(f);$('what').textContent=variantTitle(f);$('isdefault').textContent=statusOf(f)!=='Ready'?statusOf(f)+' portrait':defaultOf(person)?.id===f.id?'Default portrait':'Alternate portrait';
+const picked=decisions.defaults[person.id]===f.id;
+ const choose=$('chooseDefault');
+ choose.hidden=statusOf(f)!=='Ready'||Boolean(f.alternate_only_reason)||!activeStats(person).count;
+ choose.textContent=picked?'Restore automatic default':'Use as default';
+ choose.className=picked?'':'primary';
+ if(picked&&!choose.hidden)$('isdefault').textContent='Your default portrait';
+ $('defaultFeedback').textContent='';
+ $('facts').replaceChildren(el('div',books.get(f.source).title+' · p. '+f.page),el('div',f.width+' × '+f.width+' px · '+f.style+(f.depiction?' · '+f.depiction:'')+' · '+person.gender+' · '+ageOf(person)),el('div',decisions.portraits[f.id]?.expression?'User expression label':f.label_basis==='Unlabelled'?'Expression awaiting a descriptive label':f.label_basis+(f.caption?' · '+f.caption:'')));
+$('pid').textContent=f.id;$('saveimg').href=f.file;$('saveimg').download=f.id+'.webp';$('saved').textContent='';for(const j of $('variants').children)j.setAttribute('aria-pressed',String(sameCloseup(j.dataset.id,f)));outfitImage(f);showGroupSelector(f)}
+$('chooseDefault').onclick=()=>{
+ const c=person, selected=face;
+ if(statusOf(selected)!=='Ready'||selected.alternate_only_reason||!activeStats(c).count)return;
+ const reset=decisions.defaults[c.id]===selected.id;
+ decisions.defaults[c.id]=reset?null:selected.id;
+ saveDecisions();
+ openFace(c,defaultOf(c)||selected);
+ $('defaultFeedback').textContent=(reset?'Automatic default restored. ':'Default portrait selected. ')+$('feedback').textContent;
+ $('chooseDefault').focus();
+};
+$('close').onclick=()=>$('detail').close();$('jumppage').onclick=()=>{$('detail').close();$('sbook').value=face.source;$('pnum').value=face.page;tab('sources')};
+let loaded=new Set();window.showSourcePages=(k,p)=>{pages[k]=p;if(sBook===k)drawPage()};
+function source(){sBook=$('sbook').value;if(pages[sBook])return drawPage();$('pagebody').textContent='Loading source index…';if(!loaded.has(sBook)){let sc=el('script');sc.src='review/'+sBook+'.js';let k=sBook;sc.onerror=()=>{loaded.delete(k);if(sBook===k)$('pagebody').textContent='This book index could not be opened.'};loaded.add(k);document.body.append(sc)}}
+$('sbook').onchange=()=>{$('pnum').value='1';source()};$('showHidden').onchange=source;$('showRaw').onchange=source;$('pnum').onchange=source;$('prev').onclick=()=>{$('pnum').value=nextPage(-1);source()};$('next').onclick=()=>{$('pnum').value=nextPage(1);source()};
+function nextPage(direction){const list=books.get(sBook).available_pages,n=+$('pnum').value;return list?(direction>0?list.find(v=>v>n):list.findLast(v=>v<n))??n:n+direction}
+function drawPage(){let s=books.get(sBook),p=Math.min(s.pages,Math.max(1,Math.trunc(+$('pnum').value)||1));if(s.available_pages&&!s.available_pages.includes(p))p=s.available_pages.find(v=>v>=p)??s.available_pages.at(-1);let rec=pages[sBook][p-1],out=$('pagebody');$('pnum').max=s.pages;$('pnum').value=p;$('prev').disabled=p===(s.available_pages?.[0]??1);$('next').disabled=p===(s.available_pages?.at(-1)??s.pages);out.replaceChildren();
+let allowed=rec.curated.filter(id=>faces.has(id)&&statusOf(faces.get(id)[1])==='Ready'&&activeStats(faces.get(id)[0]).count>0);let info=el('p','Page '+p+' of '+s.pages,'count');if(rec.original_url){let link=el('a','Publisher original');link.href=rec.original_url;link.rel='noopener';link.target='_blank';info.append(' · ',link)}out.append(info,el('h3','Usable portraits ('+allowed.length+')','section'));let a=el('div',undefined,'reviewfaces');out.append(a);for(let id of allowed){let pair=faces.get(id);if(!pair)continue;let [c,f]=pair,b=el('button',undefined,'mini');b.append(pic(f,c.name),el('span',c.name));b.onclick=()=>openFace(c,f);a.append(b)}
+$('hiddenRawLabel').hidden=!$('showRaw').checked;if(!$('showRaw').checked)return;const unassigned=rec.review.filter(([i])=>!rec.assigned?.[i]);const rawFaces=unassigned.filter(([i])=>$('showHidden').checked||decisions.sources[rawID(s.id,p,i)]?.action!=='Hide');out.append(el('h3','Unassigned source faces ('+rawFaces.length+')','section'));let list=el('div',undefined,'reviewfaces');out.append(list);
+for(let [i,off] of rawFaces){let fig=el('button',undefined,'candidate'),im=el('div',undefined,'tile');im.style.backgroundImage='url("review/'+s.id+'-'+String(Math.floor(off/256)).padStart(2,'0')+'.webp")';im.style.backgroundPosition='-'+(off%16*64)+'px -'+(Math.floor(off%256/16)*64)+'px';fig.append(im,el('span','Face '+i+(decisions.sources[rawID(s.id,p,i)]?' · Saved':'')));fig.onclick=()=>rawChoice(s.id,p,i,off);fig.title='recover '+s.id+' '+p+' '+i;list.append(fig)}
+if(unassigned.length)out.append(el('p','Click a face to identify or hide it. For a full-size crop, use the mapping skill’s recover command with book ID '+s.id+', page '+p+' and the face number to extract a full-size review crop.','minor'))}
+try{let a=JSON.parse(localStorage.getItem('artbook.portrait.mapping.v1')||'[]');if(Array.isArray(a))assignments=a.filter(x=>x&&faces.has(x.portrait_id))}catch{}
+function persist(){try{localStorage.setItem('artbook.portrait.mapping.v1',JSON.stringify(assignments));return true}catch{return false}}
+function drawMap(){let out=$('maprows');out.replaceChildren();$('mapcount').textContent=assignments.length?'('+assignments.length+')':'';$('exportmap').disabled=!assignments.length;if(!assignments.length)out.append(el('p','No slots assigned yet. Select a character and choose “Assign to a game slot”.','empty'));
+for(const [i,a] of assignments.entries()){let [c,f]=faces.get(a.portrait_id),row=el('div',undefined,'row'),desc=el('div');desc.append(el('strong',a.target+' · '+a.slot),el('div',a.game+' · '+a.platform+' · '+c.name+' · '+expressionOf(f)+(statusOf(f)!=='Ready'?' · Needs replacement or approval':''),'minor'));let rm=el('button','Remove');rm.onclick=()=>{assignments.splice(i,1);persist();drawMap()};if(!f.hidden_reason)row.append(pic(f,c.name));row.append(desc,rm);out.append(row)}}
+$('mapform').onsubmit=ev=>{ev.preventDefault();if(statusOf(face)!=='Ready'||!activeStats(person).count)return;let a={};for(const k of ['game','platform','target','slot']){a[k]=$(k).value.trim();if(!a[k]){$(k).focus();return}}a.character_id=person.id;a.portrait_id=face.id;let i=assignments.findIndex(x=>['game','platform','target','slot'].every(k=>x[k]===a[k]));if(i<0)assignments.push(a);else assignments[i]=a;let stored=persist();drawMap();$('saved').textContent=stored?'Assignment saved.':'Assignment added for this session. Export JSON before closing.'};
+$('exportmap').onclick=()=>{let blob=new Blob([JSON.stringify({schema:'portrait-atlas-mapping/1',mappings:assignments},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=el('a');a.href=url;a.download='portrait-mapping.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),3000)};
+refresh();
+function openFragment(){
+ if(location.hash.startsWith('#outfits-')){
+  const c=cast.get(location.hash.slice(9));
+  if(c){const f=c.portraits.find(f=>f.pose&&statusOf(f)==='Ready');if(f){$('castGame').value=gameForSource.get(f.source);loadGameBooks();tab('cast');search();openFace(c,f);return}}
+ }
+ const match=location.hash.match(/^#female-review(?:-(\d+))?$/);
+ if(match){enterFemaleBatch(Math.max(0,Number(match[1]||1)-1))}
+ else if(/^#source-([a-z0-9-]+)-(\d+)$/.test(location.hash)){
+  const [,key,n]=location.hash.match(/^#source-([a-z0-9-]+)-(\d+)$/);
+  if(books.has(key)){ $('sbook').value=key; $('pnum').value=n; $('showRaw').checked=true; tab('sources') }
+ }
+ else if(location.hash==='#pending-defaults'){$('defaultState').value='pending';tab('cast');search()}
+ else if(location.hash.startsWith('#game-')&&gamesById.has(location.hash.slice(6))){$('castGame').value=location.hash.slice(6);loadGameBooks();tab('cast');search()}
+ else if(location.hash.startsWith('#book-')&&books.has(location.hash.slice(6))){$('castGame').value=gameForSource.get(location.hash.slice(6));loadGameBooks();$('book').value=location.hash.slice(6);tab('cast');search()}
+ else if(location.hash==='#decisions'){updateBatchControls(false);decisionPage=0;tab('decisions')}
+}
+openFragment();window.addEventListener('hashchange',openFragment);
+</script></body></html>
