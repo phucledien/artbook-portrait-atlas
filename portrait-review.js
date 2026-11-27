@@ -119,7 +119,11 @@ try {
     }
     history.replaceState(null,'',url);render();};
   $('prev').onclick=()=>{page--;render();};$('next').onclick=()=>{page++;render();};
-  $('summary').textContent=rows.length.toLocaleString()+' candidates across '+characters.length+' characters in '+gameNames.length+' games. Choose Keep or Remove, then copy or download your decisions. Choices are saved in this browser.';
+  const titles=new Set(atlas.games.map(g=>g.title));
+  const gameCount=gameNames.filter(g=>titles.has(g)).length;
+  const collections=gameNames.filter(g=>!titles.has(g));
+  const scope=gameCount+' games'+(collections.length?' and '+collections.join(', '):'');
+  $('summary').textContent=rows.length.toLocaleString()+' candidates across '+characters.length+' characters in '+scope+'. Choose Keep or Remove, then copy or download your decisions. Choices are saved in this browser.';
   const params=new URLSearchParams(location.search);
   function restoreFilter(id) {
     if ([...$(id).options].some(o=>o.value===params.get(id))) $(id).value=params.get(id);
