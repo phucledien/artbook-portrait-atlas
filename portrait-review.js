@@ -16,6 +16,7 @@ try {
   const [atlas, audit] = await Promise.all([load('catalogue.json'),load('portrait-review.json')]);
   const games = new Map(atlas.sources.map(s => [s.id,s.game]));
   const meta = new Map();
+  const appliedKeeps = new Set();
   const rows = [];
   const characters = [];
   for (const c of atlas.characters) {
@@ -27,7 +28,10 @@ try {
       const game = games.get(p.source);
       characterGames.add(game);
       rows.push({game,c,p,other,flags});
-      for (const face of [p,other].filter(Boolean)) meta.set(face.id,{game:games.get(face.source),character:c.name});
+      for (const face of [p,other].filter(Boolean)) {
+        meta.set(face.id,{game:games.get(face.source),character:c.name});
+        if (face.review_choice === 'keep') appliedKeeps.add(face.id);
+      }
     }
     characters.push({c,games:characterGames});
   }
@@ -37,7 +41,7 @@ try {
   let choices = {};
   try {
     const stored = JSON.parse(localStorage.getItem(key) || '{}');
-    choices = Object.fromEntries(Object.entries(stored).filter(([id,v])=>meta.has(id)&&['keep','remove'].includes(v)));
+    choices = Object.fromEntries(Object.entries(stored).filter(([id,v])=>meta.has(id)&&['keep','remove'].includes(v)&&!(v==='keep'&&appliedKeeps.has(id))));
   } catch {}
   const pageSize = 12;
   let page = 0;
@@ -54,7 +58,7 @@ try {
     const link = element('a');link.href=p.file;link.target='_blank';link.rel='noopener';
     const img=element('img');img.src=p.thumb||p.file;img.alt=c.name+' · '+p.expression;img.loading='lazy';link.append(img);
     const title=p.pose?.label||(p.expression==='Expression variation' && p.sprite_variant)||p.expression;
-    box.append(element('strong',role,'slot'),link,element('div',title),element('div',
+    box.append(element('strong',appliedKeeps.has(p.id)?role+' · Previously kept':role,'slot'),link,element('div',title),element('div',
       (p.pose?'Outfit or pose':'Expression')+' · '+p.width+' × '+(p.height||p.width)+' px'+(p.id===(atlas.shared_decisions.defaults[c.id]||c.default)?' · Default':''),'meta'),element('span',p.id,'pid'));
     const buttons=element('div',undefined,'actions');
     for (const value of ['keep','remove']) {
