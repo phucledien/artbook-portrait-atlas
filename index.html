@@ -467,17 +467,25 @@ let allowed=rec.curated.filter(id=>faces.has(id)&&statusOf(faces.get(id)[1])==='
 $('hiddenRawLabel').hidden=!$('showRaw').checked;if(!$('showRaw').checked)return;const unassigned=rec.review.filter(([i])=>!rec.assigned?.[i]);const rawFaces=unassigned.filter(([i])=>$('showHidden').checked||decisions.sources[rawID(s.id,p,i)]?.action!=='Hide');out.append(el('h3','Unassigned source faces ('+rawFaces.length+')','section'));let list=el('div',undefined,'reviewfaces');out.append(list);
 for(let [i,off] of rawFaces){let fig=el('button',undefined,'candidate'),im=el('div',undefined,'tile');im.style.backgroundImage='url("review/'+s.id+'-'+String(Math.floor(off/256)).padStart(2,'0')+'.webp")';im.style.backgroundPosition='-'+(off%16*64)+'px -'+(Math.floor(off%256/16)*64)+'px';fig.append(im,el('span','Face '+i+(decisions.sources[rawID(s.id,p,i)]?' · Saved':'')));fig.onclick=()=>rawChoice(s.id,p,i,off);fig.title='recover '+s.id+' '+p+' '+i;list.append(fig)}
 if(unassigned.length)out.append(el('p','Click a face to identify or hide it. For a full-size crop, use the mapping skill’s recover command with book ID '+s.id+', page '+p+' and the face number to extract a full-size review crop.','minor'))}
-try{let a=JSON.parse(localStorage.getItem('artbook.portrait.mapping.v1')||'[]');if(Array.isArray(a))assignments=a.filter(x=>x&&faces.has(x.portrait_id))}catch{}
+const retiredMappings = new Set(D.retired_ids.portraits);
+try{let a=JSON.parse(localStorage.getItem('artbook.portrait.mapping.v1')||'[]');if(Array.isArray(a))assignments=a.filter(x=>x&&(faces.has(x.portrait_id)||retiredMappings.has(x.portrait_id)&&cast.has(x.character_id)))}catch{}
 function persist(){try{localStorage.setItem('artbook.portrait.mapping.v1',JSON.stringify(assignments));return true}catch{return false}}
 function drawMap(){let out=$('maprows');out.replaceChildren();$('mapcount').textContent=assignments.length?'('+assignments.length+')':'';$('exportmap').disabled=!assignments.length;if(!assignments.length)out.append(el('p','No slots assigned yet. Select a character and choose “Assign to a game slot”.','empty'));
-for(const [i,a] of assignments.entries()){let [c,f]=faces.get(a.portrait_id),row=el('div',undefined,'row'),desc=el('div');desc.append(el('strong',a.target+' · '+a.slot),el('div',a.game+' · '+a.platform+' · '+c.name+' · '+expressionOf(f)+(statusOf(f)!=='Ready'?' · Needs replacement or approval':''),'minor'));let rm=el('button','Remove');rm.onclick=()=>{assignments.splice(i,1);persist();drawMap()};if(!f.hidden_reason)row.append(pic(f,c.name));row.append(desc,rm);out.append(row)}}
+for(const [i,a] of assignments.entries()){
+ const [c,f]=faces.get(a.portrait_id)||[cast.get(a.character_id),null];
+ const label=f?expressionOf(f)+(statusOf(f)==='Ready'?'':' · Needs replacement or approval'):'Retired portrait · Choose a replacement for this slot';
+ const row=el('div',undefined,'row'),desc=el('div');
+ desc.append(el('strong',a.target+' · '+a.slot),el('div',a.game+' · '+a.platform+' · '+c.name+' · '+label,'minor'));
+ const rm=el('button','Remove');rm.onclick=()=>{assignments.splice(i,1);persist();drawMap()};
+ if(f&&!f.hidden_reason)row.append(pic(f,c.name));row.append(desc,rm);out.append(row);
+}}
 $('mapform').onsubmit=ev=>{ev.preventDefault();if(statusOf(face)!=='Ready'||!activeStats(person).count)return;let a={};for(const k of ['game','platform','target','slot']){a[k]=$(k).value.trim();if(!a[k]){$(k).focus();return}}a.character_id=person.id;a.portrait_id=face.id;let i=assignments.findIndex(x=>['game','platform','target','slot'].every(k=>x[k]===a[k]));if(i<0)assignments.push(a);else assignments[i]=a;let stored=persist();drawMap();$('saved').textContent=stored?'Assignment saved.':'Assignment added for this session. Export JSON before closing.'};
 $('exportmap').onclick=()=>{let blob=new Blob([JSON.stringify({schema:'portrait-atlas-mapping/1',mappings:assignments},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=el('a');a.href=url;a.download='portrait-mapping.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),3000)};
 refresh();
 function openFragment(){
  if(location.hash.startsWith('#outfits-')){
   const c=cast.get(location.hash.slice(9));
-  if(c){const f=c.portraits.find(f=>f.pose&&statusOf(f)==='Ready');if(f){$('castGame').value=gameForSource.get(f.source);loadGameBooks();tab('cast');search();openFace(c,f);return}}
+  if(c){const f=c.portraits.find(f=>f.pose&&statusOf(f)==='Ready')||defaultOf(c)||readyFaces(c)[0];if(f){$('castGame').value=gameForSource.get(f.source);loadGameBooks();tab('cast');search();openFace(c,f);return}}
  }
  const match=location.hash.match(/^#female-review(?:-(\d+))?$/);
  if(match){enterFemaleBatch(Math.max(0,Number(match[1]||1)-1))}
